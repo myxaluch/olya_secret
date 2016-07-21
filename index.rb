@@ -15,7 +15,7 @@ post '/' do
     :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
     :password       => ENV['MAILGUN_SMTP_PASSWORD'],
     :authentication => :plain, # :plain, :login, :cram_md5, no auth by default
-    :domain         => 'arcane-plateau-47565.heroku.com' # the HELO domain provided by the client to the server
+    :domain         => 'salty-mesa-79842.heroku.com' # the HELO domain provided by the client to the server
   }
 })
 redirect to('/')
