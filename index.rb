@@ -1,11 +1,11 @@
 require 'sinatra'
-require 'pony'
 
 get '/' do
   erb :index
 end
 
 post '/' do
+  require 'pony'
   Pony.mail({
   :to => 'amikotov@gmail.com',
   :header => 'Test',
