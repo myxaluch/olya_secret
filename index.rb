@@ -8,14 +8,17 @@ end
 post '/' do
   Pony.mail({
   :to => 'amikotov@gmail.com',
+  :header => 'Test',
+  :body => 'Test',
   :via => :smtp,
   :via_options => {
-    :address        => ENV['MAILGUN_SMTP_PORT'],
-    :port           => ENV['MAILGUN_SMTP_SERVER'],
-    :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
-    :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-    :authentication => :plain, # :plain, :login, :cram_md5, no auth by default
-    :domain         => 'salty-mesa-79842.heroku.com' # the HELO domain provided by the client to the server
+    :address => 'smtp.sendgrid.net',
+    :port => '587',
+    :domain => 'heroku.com',
+    :user_name => ENV['SENDGRID_USERNAME'],
+    :password => ENV['SENDGRID_PASSWORD'],
+    :authentication => :plain,
+    :enable_starttls_auto => true
   }
 })
 redirect to('/')
