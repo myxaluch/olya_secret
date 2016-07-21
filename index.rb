@@ -20,8 +20,3 @@ post '/' do
 })
 redirect to('/')
 end
-
-
-get '/hello' do
-  'Hello, world'
-end
