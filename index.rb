@@ -21,5 +21,4 @@ post '/' do
     :enable_starttls_auto => true
   }
 })
-redirect to('/')
 end
