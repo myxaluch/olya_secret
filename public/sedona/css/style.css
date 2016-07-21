@@ -1,0 +1,1293 @@
+/*Общее*/
+body {
+  /* Позиционирование */
+  /* Блочная модель */
+  width: 100%;
+  margin: 0;
+   /* Типографика */
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: regular;
+  font-family: 'PT Sans', Arial, sans-serif;
+  text-transform: uppercase;
+  /* Оформление */
+  color: #333333;
+  background-color: #f2f2f2;
+
+  /* Анимация */
+  /* Разное */
+}
+
+h1 {
+    /* Блочная модель */
+    margin: 0;
+   /* Типографика */
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  font-family: 'PT Sans', Arial, sans-serif;
+  /* Оформление */
+  color: #000000;
+}
+
+h2 {
+    /* Блочная модель */
+    margin: 0;
+   /* Типографика */
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+  font-family: 'PT Sans', Arial, sans-serif;
+  /* Оформление */
+  color: #000000;
+}
+
+h3{
+  /* Блочная модель */
+  margin: 0;
+}
+
+p{
+    /* Блочная модель */
+    margin: 0;
+}
+
+input,
+button{
+  outline:none;
+}
+
+/*Сетка*/
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.container{
+  /* Блочная модель */
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  /* Оформление */
+  background-color: #ffffff;
+  box-shadow: 0 0px 9px 0 #dbdbdb;
+}
+
+.main-navigation{
+  /* Блочная модель */
+  min-height: 56px;
+   /* Типографика */
+  font-size: 0px;
+  /* Оформление */
+  background-color: #ffffff;
+}
+
+.main-navigation ul{
+  /* Блочная модель */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 15px 72px;
+  width: 1200px;
+  min-height: 56px;
+  /* Оформление */
+  list-style: none;
+}
+
+.main-navigation li{
+  /* Блочная модель */
+  display: inline-block;
+  vertical-align: top;
+  padding: 0;
+  width: 150px;
+  /* Оформление */
+  list-style: none;
+}
+
+.main-navigation a{
+ /* Типографика */
+ font-weight: bold;
+ line-height: 26px;
+ font-size: 14px;
+ vertical-align: middle;
+  /* Оформление */
+  color: #000000;
+  text-decoration: none;
+}
+
+.main-navigation .left-navigation{
+  text-align: right;
+  margin-left: 90px;
+}
+
+.main-navigation .right-navigation{
+  text-align: left;
+  margin-right: 90px;
+}
+
+.main-navigation .last-right{
+  margin-right: 186px;
+}
+
+.logo{
+  /* Позиционирование */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -69px;
+  /* Блочная модель */
+  float: left;
+  width: 138px;
+  z-index: 100;
+}
+
+.main-navigation a:hover {
+  /* Оформление */
+  color: #81b3d2;
+}
+
+.main-navigation a:active {
+  /* Оформление */
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.main-navigation .active{
+  /* Оформление */
+  color: #766357;
+}
+
+.main-navigation .active:hover{
+  /* Оформление */
+  color: #604e43;
+}
+
+.main-navigation .active:active{
+  /* Оформление */
+  color: rgba(118, 99, 87, 0.3);
+}
+
+.index-body{
+  position: relative;
+}
+
+.index-footer{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: rgba(255 ,255 ,255 ,0.9);
+}
+
+.main-footer .container{
+  /* Блочная модель */
+  box-sizing: border-box;
+  min-height: 115px;
+  /* Оформление */
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-hashtag{
+  /* Блочная модель */
+  float:left;
+  box-sizing: border-box;
+  width: 240px;
+  margin-left: 80px;
+  margin-right: 130px;
+  margin-top: 46px;
+  min-height: 27px;
+  /* Типографика */
+  font-weight: bold;
+  line-height: 26px;
+  font-size: 21px;
+  text-align: center;
+}
+
+.footer-social{
+  /* Блочная модель */
+  float:left;
+  width: 280px;
+  padding-top: 35px;
+  padding-bottom: 37px;
+  padding-left: 40px;
+  margin-left: 32px;
+}
+
+.footer-social p {
+  /* Блочная модель */
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.social-btn {
+  /* Блочная модель */
+  margin: 0;
+  display: inline-block;
+  vertical-align: top;
+  width: 46px;
+  height: 48px;
+  margin-right: 3px;
+  margin-left: 1px;
+  box-sizing: border-box;
+  /* Типографика */
+  font-size: 0;
+  text-decoration: none;
+  background-color: #81b3d2;
+}
+
+.social-btn-tw {
+  width: 46px;
+  height: 48px;
+  display: block;
+  /* Оформление */
+  background-image: url("../img/footer-sprite.png");
+  background-repeat: no-repeat;
+  background-position: -31px 0px;
+}
+
+.social-btn-fb {
+  width: 46px;
+  height: 48px;
+  display: block;
+  /* Оформление */
+  background-image: url("../img/footer-sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0px -4px;
+}
+
+.social-btn-yt {
+  width: 46px;
+  height: 48px;
+  display: block;
+  /* Оформление */
+  background-image: url("../img/footer-sprite.png");
+  background-repeat: no-repeat;
+  background-position: -68px -2px;
+}
+
+.social-btn:hover
+ {
+  /* Оформление */
+  background-color: #669ec0;
+}
+
+.social-btn:active{
+  background-color: #5496bd;
+}
+
+.social-btn-tw:active,
+.social-btn-fb:active,
+.social-btn-yt:active
+ {
+  /* Оформление */
+  opacity: 0.3;
+}
+
+.footer-copyright{
+  /* Блочная модель */
+  float:right;
+  width: 240px;
+  margin-right: 58px;
+  margin-top: 40px;
+}
+
+.footer-copyright a{
+  /* Блочная модель */
+  display: block;
+  float: left;
+  width: 120px;
+  height: 39px;
+  /* Типографика */
+  font-size: 0;
+   /* Оформление */
+   background-image: url("../img/footer-sprite.png");
+   background-repeat: no-repeat;
+   background-position: -115px -13px;
+}
+
+.footer-copyright a:hover{
+  background-image: url("../img/footer-sprite.png");
+  background-repeat: no-repeat;
+  background-position: -238px -13px;
+}
+
+.footer-copyright a:active{
+  background-image: url("../img/footer-sprite.png");
+  background-repeat: no-repeat;
+  background-position: -374px -8px;
+}
+
+.footer-copyright p{
+  /* Блочная модель */
+  float:left;
+  min-height: 32.5px;
+  padding-top: 6.5px;
+  width: 75px;
+  margin-right: 7px;
+  /* Типографика */
+  line-height: 26px;
+}
+/*----------------------------------------------------------------------------*/
+/*index.html*/
+.header-image {
+  /* Позиционирование */
+  position: relative;
+  /* Блочная модель */
+  height: 510px;
+  width: 100%;
+  /* Оформление */
+  background-image: url("../img/bg2.jpg");
+  background-repeat: no-repeat;
+  background-color: #ddebf4;
+  background-position: bottom;
+}
+
+.header-image img{
+  /* Позиционирование */
+  position: absolute;
+  top: 76px;
+  left: 371px;
+}
+
+.header-description{
+  /* Блочная модель */
+  margin-top: 0;
+  min-height: 210px;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+}
+
+.header-description .title, .header-description-item{
+  text-align: center;
+  /*vertical-align: middle;*/
+}
+
+.header-description .title{
+  padding-bottom: 30px;
+}
+
+.reason-block-1,
+.reason-block-2{
+  /* Блочная модель */
+  min-height: 255px;
+  background-color: #81b3d2;
+}
+
+ .reason-block-1 .reason-text{
+  /* Блочная модель */
+  float: left;
+  width: 400px;
+  padding: 55px 15px;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  /* Типографика */
+  text-align: center;
+  /*vertical-align: middle;*/
+  /* Оформление */
+  color: #ffffff;
+}
+
+.reason-block-1 .reason-image{
+  /* Блочная модель */
+  float: right;
+  width: 800px;
+  height: 255px;
+}
+
+.reason-block-2 .reason-text{
+ /* Блочная модель */
+ float: right;
+ width: 400px;
+ padding: 55px 15px;
+ padding-bottom: 50px;
+ box-sizing: border-box;
+ /* Типографика */
+ text-align: center;
+ /*vertical-align: middle;*/
+ /* Оформление */
+ color: #ffffff;
+}
+
+.reason-block-2 .reason-image{
+ /* Блочная модель */
+ float: left;
+ width: 800px;
+ height: 255px;
+}
+
+.reason-text h2{
+  /* Блочная модель */
+  padding-bottom: 24px;
+  /* Оформление */
+  color: #ffffff;
+}
+
+.reason-text .number,
+.advantage-block .number{
+  /* Блочная модель */
+  padding-bottom: 21px;
+}
+
+.city-info-item{
+  /* Блочная модель */
+  float: left;
+  box-sizing: border-box;
+  width: 400px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 61px;
+  padding-bottom: 82px;
+}
+
+.advantage-block-item{
+  /* Блочная модель */
+  float: left;
+  box-sizing: border-box;
+  width: 400px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 47px;
+  padding-bottom: 60px;
+}
+
+.city-info-item{
+  /* Типографика */
+  text-align: center;
+  /*vertical-align: middle;*/
+}
+
+.city-info-image img{
+  /* Блочная модель */
+  margin: 0 auto;
+}
+
+.city-info-image,
+.city-info-title{
+  /* Блочная модель */
+  margin-bottom: 25px;
+}
+
+.advantage-block{
+  /* Оформление */
+  background-color: #eeeeee;
+}
+.advantage-block-item{
+    /* Типографика */
+    text-align: center;
+    /*vertical-align: middle;*/
+}
+
+.advantage-title{
+  /* Блочная модель */
+  margin-bottom: 23px;
+}
+
+.search-hotel-block{
+  height: 883px;
+  position: relative;
+}
+
+.map-block{
+  height: 590px;
+}
+
+.search-hotel-block-title,
+.search-hotel-block-item{
+  /* Типографика */
+  text-align: center;
+  /*vertical-align: middle;*/
+  line-height: 24px;
+}
+
+.search-hotel-block-title{
+  /* Блочная модель */
+  padding-top: 55px;
+  padding-bottom: 30px;
+  /* Типографика */
+  font-size: 30px;
+}
+
+.search-hotel-block-item{
+  /* Блочная модель */
+  padding-bottom: 134px;
+}
+
+.search-hotel{
+  /* Позиционирование */
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  top: 205px;
+  /* Блочная модель */
+  width: 568px;
+  /* Оформление */
+  background-color: #ffffff;
+}
+
+.search-hotel-invisible{
+  display: none;
+}
+
+.search-hotel .title-block{
+  /* Блочная модель */
+  box-sizing: border-box;
+  min-height: 86px;
+  padding: 30px;
+  /* Оформление */
+  background-color: #766357;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.search-hotel .title{
+  /* Блочная модель */
+  width: inherit;
+  height: inherit;
+  box-sizing: border-box;
+  /* Типографика */
+  line-height: 26px;
+  font-size: 21px;
+  text-align: center;
+  /*vertical-align: middle;*/
+}
+
+.input-block{
+  /* Блочная модель */
+  /*display: none; */
+  width: 458px;
+  min-height: 342px;
+  padding: 55px;
+  padding-bottom: 0;
+  /* Типографика */
+  line-height: 26px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 13px 0 13px -13px #dbdbdb, -13px 0 13px -13px #dbdbdb, 0 13px 13px -13px #dbdbdb;
+}
+
+.input-block-item{
+  /* Блочная модель */
+  height: 38px;
+  margin-bottom: 30px;
+}
+
+.label-date{
+  /* Блочная модель */
+  display: block;
+  float: left;
+  height: inherit;
+  /* Типографика */
+  /*vertical-align: middle;*/
+}
+
+.input-block-date{
+  /* Блочная модель */
+  display: block;
+  float: right;
+  width: 327px;
+  height: 34px;
+  padding: 0;
+  border: 2px solid #f2f2f2;
+  margin: 0;
+  padding-left: 15px;
+  /* Типографика */
+  font-family: 'PT Sans', Arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 26px;
+  font-size: 14px;
+  font-weight: bold;
+  /* Оформление */
+  background-color: #f2f2f2;
+  background-image: url("../img/hotel-form-sprite.png");
+  background-repeat: no-repeat;
+  background-position: 305px -3px;
+}
+
+.input-block-date:focus,
+.input-block-text:focus{
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+}
+
+.input-block-date:hover{
+  background-image: url("../img/hotel-form-sprite.png");
+  background-repeat: no-repeat;
+  background-position: 305px -83px;
+}
+
+.input-block-date:active{
+  background-image: url("../img/hotel-form-sprite.png");
+  background-repeat: no-repeat;
+  background-position: 305px -43px;
+}
+
+.input-block-date-empty{
+  border: 2px solid #e10018;
+}
+
+.input-block-text{
+  /* Блочная модель */
+  display: block;
+  float: right;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 2px solid #f2f2f2;
+  margin: 0;
+  /* Типографика */
+  font-family: 'PT Sans', Arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 26px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  /* Оформление */
+  background-color: #f2f2f2;
+}
+
+.plus-btn,
+.minus-btn{
+  /* Блочная модель */
+  display: block;
+  float: right;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  /* Оформление */
+  background-color: #f2f2f2;
+}
+
+.minus-btn{
+  /* Оформление */
+  background-image: url("../img/hotel-form-sprite.png");
+  background-repeat: no-repeat;
+  background-position: 5px -111px;
+}
+
+.minus-btn:hover{
+  /* Оформление */
+  background-image: url("../img/hotel-form-sprite.png");
+  background-repeat: no-repeat;
+  background-position: 5px -153px;
+}
+
+.minus-btn:active{
+  /* Оформление */
+  background-image: url("../img/hotel-form-sprite.png");
+  background-repeat: no-repeat;
+  background-position: 5px -132px;
+}
+
+.plus-btn{
+  /* Оформление */
+  background-image: url("../img/hotel-form-sprite.png");
+  background-repeat: no-repeat;
+  background-position: 4px -178px;
+}
+.plus-btn:hover{
+  /* Оформление */
+  background-image: url("../img/hotel-form-sprite.png");
+  background-repeat: no-repeat;
+  background-position: 4px -236px;
+}
+
+.plus-btn:active{
+  /* Оформление */
+  background-image: url("../img/hotel-form-sprite.png");
+  background-repeat: no-repeat;
+  background-position: 4px -207px;
+}
+
+.input-block-adults{
+  /* Блочная модель */
+  float: left;
+  width: 227px;
+  margin-bottom: 0;
+}
+
+.input-block-kids{
+  float: right;
+  width: 180px;
+  margin-bottom: 0;
+}
+
+.input-block label{
+  line-height: 38px;
+}
+
+.search-btn{
+  /* Блочная модель */
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 58px;
+  border: 0;
+  margin-top: 55px;
+  padding: 16px;
+  /* Типографика */
+  font-family: 'PT Sans', Arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 26px;
+  font-size: 21px;
+  font-weight: bold;
+  text-align: center;
+  /* Оформление */
+  background-color: #81b3d2;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.search-btn:hover{
+  /* Оформление */
+  background-color: #669ec0;
+}
+
+.search-btn:active{
+  /* Оформление */
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+/*----------------------------------------------------------------------------*/
+/*Hotels*/
+
+.filter-block{
+  /* Блочная модель */
+  box-sizing: border-box;
+  min-height: 218px;
+  padding: 27px 71px;
+  /* Оформление */
+  background-image: url("../img/filter background.jpg");
+  background-repeat: no-repeat;
+  background-color: #766357;
+  background-position: 0 -55px;
+  color: #ffffff;
+}
+
+.filter-block h2{
+  /* Блочная модель */
+  margin-bottom: 25px;
+  /* Типографика */
+  font-size: 16px;
+  line-height: 21px;
+  /* Оформление */
+  color: #ffffff;
+}
+
+.filter-infrastructure{
+  /* Блочная модель */
+  float: left;
+  width: 240px;
+}
+
+.filter-housing-type{
+  /* Блочная модель */
+  float:left;
+  margin-left: 15px;
+}
+
+.filter-infrastructure ul,
+.filter-housing-type ul{
+  margin: 0;
+}
+
+.filter-infrastructure li,
+.filter-housing-type li{
+  /* Блочная модель */
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
+  list-style: none;
+}
+
+.filter-infrastructure li:last-child,
+.filter-housing-type li:last-child{
+  margin-bottom: 0;
+}
+
+.filter-infrastructure label,
+.filter-housing-type label{
+   position: relative;
+}
+
+.filter-housing-type label{
+  margin-left: 2px;
+}
+
+.filter-infrastructure input,
+.filter-housing-type input{
+   display:none;
+}
+
+.filter-infrastructure input[type="checkbox"] + span,
+.filter-housing-type input[type="checkbox"] + span{
+  display: block;
+  position: absolute;
+  left: -40px;
+  top: -2px;
+  width: 26px;
+  height: 22px;
+  background: url("../img/checkbox-sprite.png") no-repeat -77px -5px;
+  cursor: pointer;
+}
+
+.filter-infrastructure input[type="checkbox"]:checked + span,
+.filter-housing-type input[type="checkbox"]:checked + span{
+  background: url("../img/checkbox-sprite.png") no-repeat -5px -5px;
+}
+
+.filter-infrastructure input[type="checkbox"] + span:hover,
+.filter-housing-type input[type="checkbox"] + span:hover{
+  background: url("../img/checkbox-sprite.png") no-repeat -109px -5px;
+}
+.filter-infrastructure input[type="checkbox"]:checked + span:hover,
+.filter-housing-type input[type="checkbox"]:checked + span:hover{
+  background: url("../img/checkbox-sprite.png") no-repeat -41px -5px;
+}
+
+.filter-price{
+  /* Блочная модель */
+  float: right;
+  width: 328px;
+}
+
+.filter-price h2 {
+  margin-bottom: 10px;
+}
+
+.price-block{
+  /* Блочная модель */
+  box-sizing: border-box;
+  width: 318px;
+  height: 36px;
+  margin-left: 10px;
+  padding: 4px 0;
+  font-size: 0;
+  border: 2px solid #ffffff;
+  border-radius: 3px;
+}
+
+.price-block > div{
+  /* Блочная модель */
+  float: left;
+  width: 157px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  /* Типографика */
+  font-size: 14px;
+  line-height: 23px;
+}
+
+.price-block .min-price{
+  border-right: 2px solid #ffffff;
+}
+
+.price-block input{
+  border: 0;
+  padding: 0;
+  margin: 0;
+  max-width: 30px;
+  background: transparent;
+  font-family: 'PT Sans', Arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 23px;
+  font-size: 14px;
+}
+
+.min-price div{
+  max-width: 55px;
+  padding-left: 49px;
+}
+
+.max-price div{
+  max-width: 55px;
+  padding-left: 39px;
+}
+
+.slider-block {
+  position: relative;
+  box-sizing: border-box;
+  width: 297px;
+  height: 22px;
+  padding-top: 21px;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+
+#slider {
+  width: 316px;
+  height: 2px;
+  margin-left: -19px;
+  background: rgba(255,255,255,0.3);
+}
+
+.ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+  height: 2px;
+	display: block;
+	border: 0;
+  margin-left: 10.5px;
+	overflow: hidden;
+  background: linear-gradient(to right, transparent 3%, #fff 3%, #fff 97%, transparent 97%);
+}
+
+.ui-slider-handle{
+  position: absolute;
+  top: 11px;
+  left: 0;
+  width: 21px;
+  height: 23px;
+  cursor: pointer;
+  background-image: url("../img/togger.png");
+  background-repeat: no-repeat;
+}
+
+.ui-slider-handle:hover {
+  background-image: url("../img/togger-hvr.png");
+  background-repeat: no-repeat;
+}
+/*
+.ui-slider-handle:nth-child(1){
+  margin-left: -10.5px;
+}
+
+.ui-slider-handle:nth-child(2){
+  margin-right: -10.5px;
+}*/
+
+.filter-price .submit-btn{
+  box-sizing: border-box;
+  width: 137px;
+  min-height: 36px;
+  padding: 5px 35px;
+  margin-left: 93px;
+  margin-top: 2px;
+
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: regular;
+  font-family: 'PT Sans', Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 19px;
+
+  background-color: rgba(118, 99, 87, 0);
+  border: 2px solid #ffffff;
+  border-radius: 3px;
+}
+
+.sorting-block{
+  /* Блочная модель */
+  box-sizing: border-box;
+  height: 86px;
+  padding: 29px 73px;
+}
+
+.sorting-block,
+.hotel-info{
+  /* Оформление */
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.value-result{
+  /* Блочная модель */
+  float: left;
+  width: 164px;
+  /* Типографика */
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.sorting-by-container{
+  /* Блочная модель */
+  float: left;
+  width: 377px;
+  margin-top: 4px;
+}
+
+.sorting-by{
+  /* Блочная модель */
+  padding: 0;
+  margin: 0;
+}
+
+.sorting-by-title,
+.sorting-by a{
+  /* Типографика */
+  font-size: 12px;
+  line-height: 21px;
+}
+
+.sorting-by-title{
+  /* Блочная модель */
+  padding-right: 4px;
+}
+
+.sorting-by li{
+  /* Блочная модель */
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 30px;
+  /* Оформление */
+  list-style: none;
+}
+
+.sorting-by li:last-of-type{
+  padding-right: 0;
+}
+
+.sorting-by a{
+  /* Оформление */
+  text-decoration: none;
+  color: #b1b1b1;
+  border-bottom: 1px dashed #81b3d2;
+}
+
+li a.not-active:active{
+  color: #000000;
+  border: 0;
+}
+
+.sorting-by a:hover{
+  /* Оформление */
+  color: #81b3d2;
+}
+
+.sorting-by a.active,
+.sorting-by a.active:hover{
+  /* Оформление */
+  border: none;
+  color: #81b3d2;
+}
+
+.sorting-btn{
+  /* Блочная модель */
+  float: right;
+  width: 34px;
+  height: 11px;
+  padding: 0;
+  padding-top: 9px;
+  box-sizing: border-box;
+}
+
+.sorting-btn button{
+  /* Блочная модель */
+  display: none;
+}
+
+.sorting-btn label{
+  float: left;
+  display: block;
+  width: 0;
+	height: 0;
+  border-style: solid;
+  border-width: 0 5.5px 10px 5.5px;
+  border-color: transparent transparent #cccccc transparent;
+}
+
+.sorting-btn .next{
+  transform: rotate(180deg);
+  padding-bottom: 1px;
+}
+
+.sorting-btn .prev{
+  background-position: bottom;
+  margin-right: 12px;
+}
+
+.sorting-btn label:hover{
+  border-color: transparent transparent #000000 transparent;
+}
+
+.sorting-btn label:active{
+  border-color: transparent transparent #81b3d2 transparent;
+}
+
+.hotel-info{
+  /* Блочная модель */
+  box-sizing: border-box;
+  min-height: 150px;
+  padding: 30px 73px;
+}
+
+.about-hotel{
+  /* Блочная модель */
+  float: left;
+  width: 600px;
+  margin-top: -5px;
+  margin-left: -1px;
+}
+.about-hotel .hotel-name{
+  padding-bottom: 7px;
+}
+
+.about-hotel .info-hotel,
+.about-hotel .info-price{
+  /* Блочная модель */
+  padding-bottom: 13px;
+}
+
+.about-hotel .hotel-name-link{
+  text-decoration: none;
+  /* Оформление */
+  color: #000000;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.about-hotel .hotel-name-link:hover{
+  color: #81b3d2;
+}
+
+.about-hotel .hotel-name-link:active{
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.about-hotel .info{
+  /* Блочная модель */
+  display: inline-block;
+  vertical-align: top;
+}
+
+.about-hotel .info-hotel,
+.about-hotel .more-information{
+  /* Блочная модель */
+  min-width: 110px;
+  padding-left: 1px;
+}
+
+.about-hotel .booking a:active,
+.about-hotel .more-information a:active{
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.about-hotel .info-price,
+.about-hotel .booking{
+  /* Блочная модель */
+  width: 142px;
+  padding-left: 3px;
+}
+
+.hotel-main-image{
+  /* Блочная модель */
+  float: left;
+  width: 135px;
+  height: 90px;
+  margin-right: 30px;
+}
+
+.hotel-main-image img{
+  width: 100%;
+}
+
+.more-information a{
+  /* Блочная модель */
+  display: block;
+  width: 110px;
+  height: 27px;
+  /* Оформление */
+  background-color: #81b3d2;
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  line-height: 27px;
+}
+
+.booking a{
+  /* Блочная модель */
+  display: block;
+  width: 142px;
+  height: 27px;
+  /* Типографика */
+  text-align: center;
+  font-weight: bold;
+  line-height: 27px;
+  /* Оформление */
+  background-color: #766357;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.more-information a:hover{
+  /* Оформление */
+  background-color: #669ec0;
+}
+
+.booking a:hover{
+  /* Оформление */
+  background-color: #604e43;
+}
+
+.rating{
+  /* Позиционирование */
+  position: relative;
+  /* Блочная модель */
+  float: right;
+  width: 241px;
+  min-height: 91px;
+  margin-top: -1px;
+}
+
+.rating-stars{
+  /* Позиционирование */
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* Блочная модель */
+  width: 120px;
+  height: 17px;
+  transform: rotateY(180deg);
+}
+
+.rating-stars img{
+  margin: 0 1px;
+}
+
+.rating-value{
+  /* Позиционирование */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /* Блочная модель */
+  width: 110px;
+  height: 27px;
+  /* Типографика */
+  text-align: center;
+  line-height: 27px;
+  /* Оформление */
+  background-color: #f2f2f2;
+  color: #666666;
+}
+
+@keyframes fields-appearance{
+  0%{
+    transform: translate(0, 20px);
+  }
+  100%{
+    transform: translate(0, 0);
+  }
+}
+
+.input-block-date,
+.input-block-date:after,
+.label-date{
+  animation-name: fields-appearance;
+  animation-duration: 1s;
+}
+
+.input-block-adults,
+.input-block-kids{
+  animation-name: fields-appearance;
+  animation-duration: 2s;
+}
+
+.search-btn{
+  animation-name: fields-appearance;
+  animation-duration: 3s;
+}
