@@ -261,7 +261,7 @@ ul {
   transition: 0.5s;
 }
 
-.contact-form__label span {
+.contact-form span {
   display: block;
   padding-bottom: 10px;
 }

@@ -10,7 +10,7 @@ Pony.options= {
   :via_options => {
     :address => 'smtp.sendgrid.net',
     :port => '587',
-    :domain => ' heroku.com',
+    :domain => 'heroku.com',
     :user_name => ENV['SENDGRID_USERNAME'],
     :password => ENV['SENDGRID_PASSWORD'],
     :authentication => :plain,
@@ -27,9 +27,9 @@ post '/' do
     @email = params[:form][:email]
     @message = params[:form][:message]
     Pony.mail({
-    :to => ENV['SENDGRID_TO'],
-    :subject => "New question from #{@name}, #{@email}",
-    :body => "#{@message}"
+      :to => ENV['SENDGRID_TO'],
+      :subject => "New question from #{@name}, #{@email}",
+      :body => "#{@message}"
     })
-  #end
+    redirect to('/')
 end
