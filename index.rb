@@ -1,7 +1,8 @@
 require 'sinatra'
 require 'pony'
+require 'dotenv'
 
-
+Dotenv.load
 Pony.options= {
   :from => 'from-you@portfolio.com',
   :via => :smtp,
