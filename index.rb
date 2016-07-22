@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'sinatra/form_helpers'
 require 'pony'
-require 'dotenv' if settings.development?
+require 'dotenv'
 
 Dotenv.load
 Pony.options= {
