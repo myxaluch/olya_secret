@@ -1,10 +1,11 @@
 require 'sinatra'
+require 'sinatra/form_helpers'
 require 'pony'
 require 'dotenv'
 
 Dotenv.load
 Pony.options= {
-  :from => 'from-you@portfolio.com',
+  :from => ENV['SENDGRID_FROM'],
   :via => :smtp,
   :via_options => {
     :address => 'smtp.sendgrid.net',
@@ -18,17 +19,17 @@ Pony.options= {
   }
 
 get '/' do
-  erb :index
+  erb :form, :layout => :index
 end
 
 post '/' do
-  @name = params[:name]
-  @email = params[:email]
-  @message = params[:message]
-  Pony.mail({
-  :to => 'oliktva@gmail.com',
-  :subject => "New question from #{@name}, #{@email}",
-  :body => "#{@message}"
-})
-redirect to('/')
+    @name = params[:form][:name]
+    @email = params[:form][:email]
+    @message = params[:form][:message]
+    Pony.mail({
+    :to => ENV['SENDGRID_TO'],
+    :subject => "New question from #{@name}, #{@email}",
+    :body => "#{@message}"
+    })
+  #end
 end

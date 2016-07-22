@@ -1,0 +1,31 @@
+<!--<form class="contact-form" method="post">
+  <label class="contact-form__label" for="name">
+    <span>Имя:</span>
+    <input class="contact-form__input" type="text" id="name" name="name" placeholder="Введите имя">
+  </label>
+  <label class="contact-form__label" for="email">
+    <span>E-mail:</span>
+    <input class="contact-form__input" type="text" name="email" placeholder="Введите email">
+  </label>
+  <label class="contact-form__label" for="message">
+    <span>Текст сообщения:</span>
+    <textarea class="contact-form__textarea" type="text" name="message" placeholder="Введите сообщение"></textarea>
+  </label>
+  <input class="contact-form__btn btn" type="submit" name="send">
+</form> -->
+
+<%= form('/', :post, :class => 'contact-form') %>
+  <%= label(:form, :name, " ", :class => 'contact-form__label') %>
+  <%= tag :span, 'Имя:' %>
+  <%= input(:form, :name, {:class => 'contact-form__input', :placeholder => 'Введите имя'}) %>
+
+  <%= label(:form, :email, " ", :class => 'contact-form__label') %>
+  <%= tag :span, 'E-mail:' %>
+  <%= input(:form, :email, {:class => 'contact-form__input', :placeholder => 'Введите email'}) %>
+
+  <%= label(:form, :message, " ", :class => 'contact-form__label') %>
+  <%= tag :span, 'Текст сообщения:' %>
+  <%= textarea(:form, :message, '', :class => 'contact-form__input', :placeholder => 'Введите сообщение') %>
+
+  <%= submit 'Отправить', :class => 'contact-form__btn btn', :name => 'send' %>
+</form>
