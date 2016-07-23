@@ -3,9 +3,8 @@ require 'sinatra/formkeeper'
 require 'pony'
 if settings.development?
   require 'dotenv'
+  Dotenv.load
 end
-
-Dotenv.load
 Pony.options= {
   :from => ENV['SENDGRID_FROM'],
   :via => :smtp,
