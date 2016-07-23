@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
 gem 'sinatra'
-gem 'sinatra-formhelpers-ng'
+gem 'sinatra-formkeeper'
 gem 'dotenv'
 gem 'pony'

@@ -1,7 +1,9 @@
 require 'sinatra'
-require 'sinatra/form_helpers'
+require 'sinatra/formkeeper'
 require 'pony'
-require 'dotenv'
+if settings.development?
+  require 'dotenv'
+end
 
 Dotenv.load
 Pony.options= {
@@ -19,13 +21,13 @@ Pony.options= {
   }
 
 get '/' do
-  erb :form, :layout => :index
+  erb :index
 end
 
 post '/' do
-    @name = params[:form][:name]
-    @email = params[:form][:email]
-    @message = params[:form][:message]
+    @name = params[:name]
+    @email = params[:email]
+    @message = params[:message]
     Pony.mail({
       :to => ENV['SENDGRID_TO'],
       :subject => "New question from #{@name}, #{@email}",
