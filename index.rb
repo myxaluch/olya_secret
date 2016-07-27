@@ -1,5 +1,4 @@
 require 'sinatra'
-require 'sinatra/formkeeper'
 require 'pony'
 if settings.development?
   require 'dotenv'
@@ -18,11 +17,6 @@ Pony.options= {
     :enable_starttls_auto => true
     }
   }
-
-get '/' do
-  erb :index
-end
-
 post '/' do
     @name = params[:name]
     @email = params[:email]
@@ -32,5 +26,4 @@ post '/' do
       :subject => "New question from #{@name}, #{@email}",
       :body => "#{@message}"
     })
-    redirect to('/')
 end
