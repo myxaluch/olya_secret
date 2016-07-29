@@ -1,5 +1,7 @@
 require 'sinatra'
 require 'pony'
+
+
 if settings.development?
   require 'dotenv'
   Dotenv.load
@@ -17,13 +19,23 @@ Pony.options= {
     :enable_starttls_auto => true
     }
   }
+
+get '/' do
+  request.url
+end
+
 post '/' do
-    @name = params[:name]
-    @email = params[:email]
-    @message = params[:message]
+if request.referrer == ENV['REQUEST_URL']
+   @name = params[:name]
+   @email = params[:email]
+   @message = params[:message]
     Pony.mail({
       :to => ENV['SENDGRID_TO'],
       :subject => "New question from #{@name}, #{@email}",
       :body => "#{@message}"
     })
+    redirect to(request.referrer.to_s + "#contacts")
+  else
+    status 404
+  end
 end
