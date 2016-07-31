@@ -35,7 +35,7 @@ if request.referrer == ENV['REQUEST_URL']
       :body => "#{@message}"
     })
    Pony.mail({
-      :from => "no-reply@oliktva.com",
+      :from => ENV['NO_REPLY_FROM'],
       :to => "#{@email}",
       :subject => "Thanks for you message!",
       :body => "Test text"
