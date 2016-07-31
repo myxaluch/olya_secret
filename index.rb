@@ -29,10 +29,16 @@ if request.referrer == ENV['REQUEST_URL']
    @name = params[:name]
    @email = params[:email]
    @message = params[:message]
-    Pony.mail({
+   Pony.mail({
       :to => ENV['SENDGRID_TO'],
       :subject => "New question from #{@name}, #{@email}",
       :body => "#{@message}"
+    })
+   Pony.mail({
+      :from => "no-reply@oliktva.com",
+      :to => "#{@email}",
+      :subject => "Thanks for you message!",
+      :body => "Test text"
     })
     redirect to(request.referrer.to_s + "#contacts")
   else
