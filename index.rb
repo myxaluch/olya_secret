@@ -40,7 +40,7 @@ if request.referrer == ENV['REQUEST_URL']
       :subject => "Thanks for you message!",
       :body => "Test text"
     })
-    redirect to(request.referrer.to_s + "#contacts")
+    redirect to(request.referrer.to_s)
   else
     status 404
   end
