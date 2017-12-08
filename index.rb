@@ -37,8 +37,8 @@ if request.referrer == ENV['REQUEST_URL']
    Pony.mail({
       :from => ENV['NO_REPLY_FROM'],
       :to => "#{@email}",
-      :subject => "Thanks for you message!",
-      :body => "Test text"
+      :subject => "Спасибо за Ваше сообщение!",
+      :body => "Я обязательно отвечу Вам как можно быстрее. С уважением, Лытова Елена Геннадьевна"
     })
     redirect to(request.referrer.to_s)
   else
