@@ -3,3 +3,4 @@ gem 'sinatra'
 gem 'sinatra-formkeeper'
 gem 'dotenv' , :groups => [:development, :test]
 gem 'pony'
+gem 'pry-byebug'

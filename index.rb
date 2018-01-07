@@ -1,8 +1,8 @@
 require 'sinatra'
 require 'pony'
 
-
 if settings.development?
+  require 'pry'
   require 'dotenv'
   Dotenv.load
 end
@@ -25,16 +25,16 @@ get '/' do
 end
 
 post '/' do
-if request.referrer == ENV['REQUEST_URL']
-   @name = params[:name]
-   @email = params[:email]
-   @message = params[:message]
-   Pony.mail({
+  if request.referrer == ENV['REQUEST_URL']
+    @name = params[:name]
+    @email = params[:email]
+    @message = params[:message]
+    Pony.mail({
       :to => ENV['SENDGRID_TO'],
       :subject => "New question from #{@name}, #{@email}",
       :body => "#{@message}"
     })
-   Pony.mail({
+    Pony.mail({
       :from => ENV['NO_REPLY_FROM'],
       :to => "#{@email}",
       :subject => "Спасибо за Ваше сообщение!",
