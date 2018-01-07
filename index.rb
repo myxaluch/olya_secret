@@ -25,20 +25,20 @@ get '/' do
 end
 
 post '/' do
-  if request.referrer == ENV['REQUEST_URL']
+  if request.referrer == ENV['REQUEST_URL'] || request.referrer == 'https://www.lytova-portfolio.ru/contacts'
     @name = params[:name]
     @email = params[:email]
     @message = params[:message]
     Pony.mail({
       :to => ENV['SENDGRID_TO'],
-      :subject => "New question from #{@name}, #{@email}",
+      :subject => "Новое сообщение с сайта от #{@name}, #{@email}",
       :body => "#{@message}"
     })
     Pony.mail({
       :from => ENV['NO_REPLY_FROM'],
       :to => "#{@email}",
       :subject => "Спасибо за Ваше сообщение!",
-      :body => "Я обязательно отвечу Вам как можно быстрее. С уважением, Лытова Елена Геннадьевна"
+      :body => "Я обязательно отвечу Вам как можно быстрее.\nС уважением, Лытова Елена Геннадьевна"
     })
     redirect to(request.referrer.to_s)
   else
